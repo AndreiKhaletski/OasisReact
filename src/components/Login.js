@@ -20,7 +20,6 @@ const Login = () => {
 
       if (response.ok) {
         const authHeader = response.headers.get('Authorization');
-
         if (authHeader) {
           const tokenWithBearer = authHeader;
           if (rememberMe) {
@@ -30,7 +29,6 @@ const Login = () => {
           }
           window.location.href = '/cabinet';
         } else {
-          //Перенаправляем пользователя на localhost:3000/cabinet
           alert('Токен не найден в заголовке ответа');
         }
       } else {
@@ -42,12 +40,12 @@ const Login = () => {
   };
 
   return (
-    <div id={styles.dynamicText}>
-      <img src={logoImage} alt="Logo Oasis" className={styles.logo} />
-      <form id={styles.loginForm} onSubmit={handleSubmit}>
+    <div className={styles.bodyLogin}>
+      <img src={logoImage} alt="Logo Oasis" className={styles.logoLogin} />
+      <form className={styles.formLogin} onSubmit={handleSubmit}>
         <h3>Oasis</h3>
-        <div>
-          <label htmlFor="email">Your email</label>
+        <div className={styles.formDivLogin}>
+          <label htmlFor="email" className={styles.labelLogin}>Your email</label>
           <input
             type="email"
             id="email"
@@ -58,8 +56,8 @@ const Login = () => {
             className={styles.input}
           />
         </div>
-        <div>
-          <label htmlFor="password">Your password</label>
+        <div className={styles.formDivLogin}>
+          <label htmlFor="password" className={styles.labelLogin}>Your password</label>
           <input
             type="password"
             id="password"
@@ -70,9 +68,9 @@ const Login = () => {
             className={styles.input}
           />
         </div>
-        <div>
-          <label htmlFor="rememberMe" className={styles.rememberMeLabel}>Remember me</label>
-          <label className={styles.switch}>
+        <div className={styles.formDivLogin}>
+          <label htmlFor="rememberMe" className={styles.rememberMeLabelLogin}>Remember me</label>
+          <label className={styles.switchLogin}>
             <input
               type="checkbox"
               id="rememberMe"
@@ -80,10 +78,10 @@ const Login = () => {
               checked={rememberMe}
               onChange={(e) => setRememberMe(e.target.checked)}
             />
-            <span className={styles.slider}></span>
+            <span className={styles.sliderLogin}></span>
           </label>
         </div>
-        <button type="submit" className={styles.button}>Log in</button>
+        <button type="submit" className={styles.buttonLogin}>Log in</button>
       </form>
     </div>
   );
