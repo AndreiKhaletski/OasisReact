@@ -1,20 +1,11 @@
 @keyframes bounceIn {
-    0% {
-        transform: translateY(-1000px);
-        opacity: 0;
-    }
-    60% {
-        transform: translateY(30px);
-        opacity: 1;
-    }
-    80% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-.bodyLogin {
+    0% { transform: translateY(-1000px); opacity: 0; }
+    60% { transform: translateY(30px); opacity: 1; }
+    80% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .bodyLogin {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,11 +14,13 @@
     font-family: 'Caladea', sans-serif;
     background-color: #f0f0f0;
   }
-#dynamicText3 {
+  
+  #dynamicText3 {
     text-align: center;
     color: #7B68EE;
-}
-.formLogin {
+  }
+  
+  .formLogin {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,50 +31,62 @@
     width: 250px;
     margin: 20px;
     margin-left: -265px;
-    margin-bottom: -340px;
+    margin-bottom: -360px;
   }
-.formDivLogin {
+  
+  .formDivLogin {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 10px;
     width: 100%;
   }
-.labelLogin {
+  
+  .labelLogin {
     align-self: flex-start;
     margin-bottom: 5px;
     font-weight: bold;
     color: #333;
-}
-input {
+  }
+  
+  .inputLogin {
     width: 90%;
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 8px;
     font-size: 15px;
     transition: border-color 0.3s;
-}
-input:focus {
+  }
+  
+  .inputLogin:focus {
     border-color: #7B68EE;
     outline: none;
-}
-.logoLogin {
+  }
+  
+  .logoLogin {
     width: 200px;
     height: auto;
-    margin-top: -400px;
+    margin-top: -420px;
     margin-bottom: -100px;
     margin-left: 320px;
     animation: bounceIn 1s ease;
-}
-h3 {
+    transition: transform 0.15s ease-in-out;
+  }
+  
+  .logoHover:hover {
+    transform: scale(1.05);
+  }
+  
+  h3 {
     margin-top: -18px;
     font-size: 40px;
     font-family: 'Pristina', sans-serif;
     color: #333;
     width: 100%;
     text-align: center;
-}
-.buttonLogin {
+  }
+  
+  .buttonLogin {
     padding: 10px 20px;
     background-color: #7B68EE;
     color: #fff;
@@ -93,30 +98,33 @@ h3 {
     margin-top: 20px;
     width: 100%;
     height: 40px;
-}
-.buttonLogin:hover {
+  }
+  
+  .buttonLogin:hover {
     background-color: #6A5ACD;
-}
-.buttonLogin:active {
+  }
+  
+  .buttonLogin:active {
     transform: scale(0.95);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 1.2);
-}
-.switchLogin {
+  }
+  
+  .switchLogin {
     position: relative;
     display: inline-block;
     width: 52px;
-    height: 25px;
+    height: 24.7px;
     right: -160px;
     bottom: -24px;
-}
-
-.switchLog input {
+  }
+  
+  .switchLog input {
     opacity: 0;
     width: 0;
     height: 0;
-}
-
-.sliderLogin {
+  }
+  
+  .sliderLogin {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -126,28 +134,29 @@ h3 {
     background-color: #ccc;
     transition: .4s;
     border-radius: 20px;
-}
-
-.sliderLogin:before {
+  }
+  
+  .sliderLogin:before {
     position: absolute;
     content: "";
     height: 19px;
     width: 19px;
-    Right: 29.6px;
+    right: 29.6px;
     bottom: 3px;
     background-color: white;
     transition: .4s;
     border-radius: 50%;
-}
-
-input:checked + .sliderLogin {
+  }
+  
+  input:checked + .sliderLogin {
     background-color: #2196F3;
-}
-
-input:checked + .sliderLogin:before {
+  }
+  
+  input:checked + .sliderLogin:before {
     transform: translateX(26px);
-}
-.rememberMeLabelLogin {
+  }
+  
+  .rememberMeLabelLogin {
     position: relative;
     right: -30px;
     top: 49px;
@@ -155,4 +164,18 @@ input:checked + .sliderLogin:before {
     color: #333;
     font-family: 'Caladea', sans-serif;
     margin-bottom: 5px;
-}
+  }
+  
+  .resetPassword {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  .resetPassword:hover {
+    color: #7B68EE;
+  }
+  

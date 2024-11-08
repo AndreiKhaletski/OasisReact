@@ -17,7 +17,6 @@ const Login = () => {
         },
         body: JSON.stringify({ email, password })
       });
-
       if (response.ok) {
         const authHeader = response.headers.get('Authorization');
         if (authHeader) {
@@ -39,9 +38,13 @@ const Login = () => {
     }
   };
 
+  const handleLogoClick = () => {
+    window.location.href = 'http://localhost:3000';
+  };
+
   return (
     <div className={styles.bodyLogin}>
-      <img src={logoImage} alt="Logo Oasis" className={styles.logoLogin} />
+      <img src={logoImage} alt="Logo Oasis" className={`${styles.logoLogin} ${styles.logoHover}`} onClick={handleLogoClick} />
       <form className={styles.formLogin} onSubmit={handleSubmit}>
         <h3>Oasis</h3>
         <div className={styles.formDivLogin}>
@@ -53,7 +56,7 @@ const Login = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className={styles.input}
+            className={styles.inputLogin}
           />
         </div>
         <div className={styles.formDivLogin}>
@@ -65,7 +68,7 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className={styles.input}
+            className={styles.inputLogin}
           />
         </div>
         <div className={styles.formDivLogin}>
@@ -82,6 +85,9 @@ const Login = () => {
           </label>
         </div>
         <button type="submit" className={styles.buttonLogin}>Log in</button>
+        <a href="/pre-password-reset" className={styles.resetPassword}>
+          Reset your password
+        </a>
       </form>
     </div>
   );

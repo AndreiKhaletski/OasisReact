@@ -21,9 +21,13 @@ const Verification = () => {
     }
   };
 
+  const handleLogoClick3 = () => {
+    window.location.href = 'http://localhost:3000';
+  };
+
   return (
     <div className={styles.bodyVerification}>
-      <img src={logoImage} alt="Logo Oasis" className={styles.logoVerification} />
+      <img src={logoImage} alt="Logo Oasis" className={`${styles.logoVerification} ${styles.logoHover}`} onClick={handleLogoClick3} />
       <form className={styles.formVerification} onSubmit={handleSubmit}>
         <h4>Oasis</h4>
         <div>

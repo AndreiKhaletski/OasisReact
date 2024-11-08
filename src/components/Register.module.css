@@ -42,7 +42,7 @@
     background: #fff;
     padding: 40px;
     border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(170, 234, 9, 0.1);
     width: 350px;
     height: 300px;
     margin-left: -315px;
@@ -90,6 +90,11 @@
     margin-bottom: 620px;
     margin-left: 740px;
     animation: bounceIn 1s ease;
+    transition: transform 0.15s ease-in-out;
+  }
+
+  .logo2:hover {
+    transform: scale(1.05);
   }
   
   h2 {
@@ -104,11 +109,11 @@
   }
   
   .buttonRegister {
-    padding: 15px 30px;
+    padding: 10px 20px;
     background-color: #7B68EE;
     color: #fff;
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;

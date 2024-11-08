@@ -72,6 +72,11 @@
     height: auto;
     margin-bottom: 500px;
     animation: bounceIn 1s ease;
+    transition: transform 0.15s ease-in-out;
+  }
+
+  .logoHover:hover {
+    transform: scale(1.05);
   }
   
   h4 {

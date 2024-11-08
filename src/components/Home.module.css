@@ -3,19 +3,19 @@
     60% { transform: translateY(30px); opacity: 1; }
     80% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
-}
-
-@keyframes moveRight {
+  }
+  
+  @keyframes moveRight {
     0% { transform: translateX(0); }
     100% { transform: translateX(200px); }
-}
-
-@keyframes fadeIn {
+  }
+  
+  @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
-}
-
-body {
+  }
+  
+  body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,23 +25,23 @@ body {
     font-family: 'Caladea', sans-serif;
     background-color: #f0f0f0;
     transform: translateX(-125px);
-}
-
-.logoHome {
+  }
+  
+  .logoHome {
     width: 300px;
     height: auto;
     margin: 0 200px;
     position: relative;
     z-index: 1;
     visibility: hidden;
-}
-
-.logoHome.bounceIn {
+  }
+  
+  .logoHome.bounceIn {
     animation: bounceIn 1s ease forwards, moveRight 1s 1s ease-in-out forwards;
     visibility: visible;
-}
-
-.oasisTextHome {
+  }
+  
+  .oasisTextHome {
     font-size: 80px;
     font-family: 'Pristina', sans-serif;
     color: #333;
@@ -52,27 +52,26 @@ body {
     left: 50%;
     transform: translateX(-260%);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.dynamicText {
+  }
+  
+  .dynamicText {
     text-align: center;
     color: #7B68EE;
     display: flex;
     flex-direction: row;
     align-items: center;
     position: relative;
-}
-
-.buttonGroupHome {
+  }
+  
+  .buttonGroupHome {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: -175px;
     width: 1180px;
-}
-
-
-.buttonHome1 {
+  }
+  
+  .buttonHome1 {
     position: relative;
     left: 720px;
     width: 190px;
@@ -85,15 +84,11 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
-    flex-grow: 1;
     margin: 0 10px;
-    height: 40px;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.3);
-}
-
-.buttonHome2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0);
+  }
+  
+  .buttonHome2 {
     position: relative;
     right: 0%;
     width: 190px;
@@ -106,10 +101,16 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
-    flex-grow: 1;
     margin: 0 10px;
-    height: 40px;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.3);
-}
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0);
+  }
+  
+  .buttonHome1:hover, .buttonHome2:hover {
+    background-color: #6A5ACD;
+  }
+  
+  .buttonHome1:active, .buttonHome2:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 1.2);
+  }
+  
